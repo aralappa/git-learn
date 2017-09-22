@@ -1,0 +1,17 @@
+After BNI:
+-----------------------------------------
+On TPD:
+1. Copy the scripts to tpd /common folder
+            mkdir /common/<scripts folder>
+            cd /common/<scripts folder>
+            scp -r kvkr@15.250.127.22:/home/usr/kvkr/Scripts .
+2. Just check outputs of showvv, showvlun, shownode, clwait, showversion -d, showalert
+3. setlicense                            --> Get license from license site
+4. showhost
+            if host is not created
+            createhost <hostname> <wwn> <wwn>
+5. If not BNI and want to clean previous luns
+            ./cleanup
+   else if BNI
+            sh provision.sh 1 mag ---> script to create vv and export to host
+6. Check outputs of showvv, showvlun
